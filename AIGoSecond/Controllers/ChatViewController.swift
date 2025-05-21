@@ -40,7 +40,7 @@ class ChatViewController: UIViewController {
         // MARK: - chatService 초기화 (viewDidLoad에서 닉네임 전달 후)
         // 보안을 위해 실제 앱에서는 이 키를 앱에 직접 하드코딩하지 않고,
         // 서버에서 가져오거나 다른 안전한 방법으로 관리하는 것이 좋음
-        let apiKey = "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"
+        let apiKey = ProcessInfo.processInfo.environment["OPENAI_API_KEY"] ?? ""
         
         // userNickname을 사용하여 chatService를 초기화합니다.
         chatService = OpenAIChatService(apiKey: apiKey, userNickname: userNickname)
