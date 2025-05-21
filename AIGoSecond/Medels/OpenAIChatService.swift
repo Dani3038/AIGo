@@ -81,7 +81,7 @@ class OpenAIChatService {
         """
         
         if let nickname = userNickname, !nickname.isEmpty {
-            systemPrompt += "\n\n사용자의 닉네임은 '\(nickname)'입니다. 대화 중에 필요하다면 이 닉네임을 사용하여 사용자에게 친근하게 말을 걸어주세요 (예: '\(nickname)님, ...', '\(nickname)에게 ...')."
+            systemPrompt += "\n\n사용자의 닉네임은 '\(nickname)'입니다. 대화 중에 필요하다면 이 닉네임을 사용하여 사용자에게 친근하게 말을 걸어주세요 (예: '\(nickname)씨, ...', '\(nickname)씨 에게 ...')."
         }
 
         let messages: [RequestMessage] = [
