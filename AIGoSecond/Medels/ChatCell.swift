@@ -86,11 +86,11 @@ class ChatCell: UITableViewCell {
             leadingConstraint = bubbleBackgroundView.leadingAnchor.constraint(greaterThanOrEqualTo: contentView.leadingAnchor, constant: 50) // 왼쪽 여백
             leadingConstraint.isActive = true
 
-        } else { // .nun (수녀님 메시지)
+        } else { // .nun (스님 메시지)
             bubbleBackgroundView.backgroundColor = .systemGray3
             messageLabel.textColor = .black // 수녀님의 메세지 텍스트 색상 black
             
-            // 수녀님 메시지: 왼쪽에 정렬
+            // 스님 메시지: 왼쪽에 정렬
             leadingConstraint.constant = 15
             trailingConstraint.constant = -45
             leadingConstraint.isActive = true

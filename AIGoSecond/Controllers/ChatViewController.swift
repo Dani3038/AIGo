@@ -24,8 +24,8 @@ class ChatViewController: UIViewController {
         setupNavigationBar()
         setupUI()
 
-        nunProfileImageView.image = UIImage(named: "Nun")
-        nunNameLabel.text = "수녀님"
+        nunProfileImageView.image = UIImage(named: "Monk")
+        nunNameLabel.text = "스님"
 
         let apiKey = Bundle.main.infoDictionary?["OPENAI_API_KEY"] as? String ?? ""
         chatService = OpenAIChatService(apiKey: apiKey, userNickname: userNickname)
@@ -132,7 +132,7 @@ class ChatViewController: UIViewController {
         guard let messageText = messageInputTextField.text, !messageText.isEmpty else { return }
 
         guard chatLimiter.canSendMessage() else {
-            messages.append(ChatMessage(text: "수녀님과 나눌 수 있는 대화는 여기까지입니다.\n더 대화하시려면 비용을 지불해주세요!", type: .nun))
+            messages.append(ChatMessage(text: "스님과 나눌 수 있는 대화는 여기까지입니다.\n더 대화하시려면 비용을 지불해주세요!", type: .nun))
             chatTableView.reloadData()
             chatTableView.scrollToRow(at: IndexPath(row: messages.count - 1, section: 0), at: .bottom, animated: true)
             return
@@ -156,7 +156,7 @@ class ChatViewController: UIViewController {
                     self.chatTableView.reloadData()
                     self.chatTableView.scrollToRow(at: IndexPath(row: self.messages.count - 1, section: 0), at: .bottom, animated: true)
                 case .failure(let error):
-                    let errorMessage = "수녀님과의 대화에 문제가 생겼어요. \(error.localizedDescription)"
+                    let errorMessage = "스님과의 대화에 문제가 생겼어요. \(error.localizedDescription)"
                     self.messages.append(ChatMessage(text: errorMessage, type: .nun))
                     self.chatTableView.reloadData()
                     self.chatTableView.scrollToRow(at: IndexPath(row: self.messages.count - 1, section: 0), at: .bottom, animated: true)

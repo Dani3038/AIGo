@@ -28,7 +28,7 @@ class NicknameSettingViewController: UIViewController, UITextFieldDelegate {
     private func setupUI() {
         // 1. 텍스트 라벨
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.text = "수녀님과의 대화에서 사용할\n닉네임을 설정해주세요"
+        titleLabel.text = "스님과의 대화에서 사용할\n닉네임을 설정해주세요"
         titleLabel.numberOfLines = 0
         titleLabel.textAlignment = .left
         titleLabel.font = UIFont.systemFont(ofSize: 26, weight: .bold)

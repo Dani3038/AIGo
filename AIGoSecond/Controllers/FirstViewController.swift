@@ -26,7 +26,7 @@ class FirstViewController: UIViewController {
         // 2. 텍스트 라벨
         let titleLabel = UILabel()
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.text = "수녀님과의 수다로\n오늘 하루, 마음의 짐을\n내려놓고 가세요"
+        titleLabel.text = "스님과의 수다로\n오늘 하루, 마음의 짐을\n내려놓고 가세요"
         titleLabel.numberOfLines = 0 // 여러 줄 표시
         titleLabel.textAlignment = .center
         titleLabel.font = UIFont.systemFont(ofSize: 28, weight: .bold)
@@ -34,11 +34,11 @@ class FirstViewController: UIViewController {
         view.addSubview(titleLabel)
 
         // 3. 수녀님 캐릭터 이미지
-        let nunImageView = UIImageView()
-        nunImageView.translatesAutoresizingMaskIntoConstraints = false
-        nunImageView.contentMode = .scaleAspectFit // 이미지 비율 유지
-        nunImageView.image = UIImage(named: "Nun") 
-        view.addSubview(nunImageView)
+        let MonkImageView = UIImageView()
+        MonkImageView.translatesAutoresizingMaskIntoConstraints = false
+        MonkImageView.contentMode = .scaleAspectFit // 이미지 비율 유지
+        MonkImageView.image = UIImage(named: "Monk")
+        view.addSubview(MonkImageView)
 
         // 4. "짐 덜어내러 가기" 버튼
         let startButton = UIButton(type: .system)
@@ -66,10 +66,10 @@ class FirstViewController: UIViewController {
             titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
 
             // 수녀님 이미지
-            nunImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            nunImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 155),
-            nunImageView.widthAnchor.constraint(equalToConstant: 280), // 이미지 크기 조절
-            nunImageView.heightAnchor.constraint(equalToConstant: 280),
+            MonkImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            MonkImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 155),
+            MonkImageView.widthAnchor.constraint(equalToConstant: 280), // 이미지 크기 조절
+            MonkImageView.heightAnchor.constraint(equalToConstant: 280),
 
             // 시작 버튼
             startButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),

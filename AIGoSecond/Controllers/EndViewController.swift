@@ -37,7 +37,7 @@ class EndViewController: UIViewController {
         let nunImageView = UIImageView()
         nunImageView.translatesAutoresizingMaskIntoConstraints = false
         nunImageView.contentMode = .scaleAspectFit
-        nunImageView.image = UIImage(named: "Nun_good")
+        nunImageView.image = UIImage(named: "Monk_good")
         view.addSubview(nunImageView)
 
         // 4. "조금 더 이야기 나누기" 버튼
